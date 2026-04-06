@@ -1,0 +1,25 @@
+{
+  "name": "my-contributions-reuses",
+  "version": "1.0.0",
+  "description": "Webapp to check what are your contributions to Open Food Facts used for",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TTalex/my-contributions-reuses.git"
+  },
+  "author": "TTalex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TTalex/my-contributions-reuses/issues"
+  },
+  "homepage": "https://github.com/TTalex/my-contributions-reuses#readme",
+  "dependencies": {
+    "@duckdb/node-api": "^1.5.1-r.1",
+    "express": "^5.2.1"
+  }
+}
