@@ -47,9 +47,9 @@ const App = () => {
                         <div className="column">
                             <form onSubmit={(e) => e.preventDefault()}>
                                 <div className="field">
-                                    <label className="label">Open Food Facts username</label>
+                                    <label className="label">Open Food Facts user</label>
                                     <div className="control">
-                                        <input className="input" type="text" placeholder="Open Food Facts username" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                                        <input className="input" type="text" placeholder="Open Food Facts user" value={username} onChange={(e) => setUsername(e.target.value)}/>
                                     </div>
                                 </div>
                                 <div className="field">
