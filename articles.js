@@ -144,6 +144,19 @@ export default [
         url: "https://www.santepubliquefrance.fr/determinants-de-sante/nutrition-et-activite-physique/documents/rapport-synthese/exposition-des-enfants-et-des-adolescents-a-la-publicite-pour-des-produits-gras-sucres-sales",
         condition: "'en:france' in countries_tags and created_t < 1590969600 and nutriscore_score not null and not ('en:alcoholic-beverages' in categories_tags or 'en:baby-foods' in categories_tags)",
         notes: "From pdf: 'Pour coder les publicités des produits alimentaires et des boissons de la base Kantar Media... la base de données Open Food Facts a été utilisée.' L'étude porte sur le marché français et a exclu les boissons alcoolisées, l'alimentation infantile et l'alimentation pour animaux. Le rapport ayant été publié en juin 2020, le timestamp est fixé au 1er juin 2020."
+    },
+    {
+        name: "Improving data cleaning by learning from unstructured textual data",
+        authors: "Rihem Nasfi, Guy de Tré, Antoon Bronselaer",
+        url: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10896675",
+        condition: "length(allergens_tags) > 0 and created_t < 1734739200",
+        notes: "From pdf: 'Allergens. This dataset contains information about products and their allergens. The data was collected from [...] Open Food Facts', Article recieved 21 December 2024"
+    },
+    {
+        name: "Characterizing Meat- and Milk/Dairy-like Vegetarian Foods and Their Counterparts Based on Nutrient Profiling and Food Labels",
+        authors: "Rodríguez-Martín, N.M.; Córdoba, P.; Sarriá, B.; Verardo, V.; Pedroche, J.; Alcalá-Santiago, Á.; García-Villanova, B.; Molina-Montes, E.",
+        url: "https://www.mdpi.com/2304-8158/12/6/1151",
+        condition: "created_t < 1669852800 and 'en:spain' in countries_tags and nutriscore_score not null and nova_group not null and ingredients_n > 0",
+        notes: "From article: 'marketed in Spain', 'Nutritional information per 100 g or mL, ingredients, and nutritional declarations, as well as the Nutri-Score, NOVA, and Eco-Score of each food were collected from Open Food Facts' and latest retrival date is 'November 2022'"
     }
-
 ]
