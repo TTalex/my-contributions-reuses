@@ -10,16 +10,19 @@ const App = () => {
         fetchArticles()
     }, [])
 
+    const formatUsername = (username) => {
+        return username.trim().toLowerCase().replaceAll(' ', '-')
+    }
     const fetchStats = async () => {
         setLoading(true)
-        const response = await fetch(`/api/stats/${username.toLowerCase()}`)
+        const response = await fetch(`/api/stats/${formatUsername(username)}`)
         const data = await response.json()
         setLoading(false)
         setStats(data)
     }
 
     const fetchProducts = async (articleIndex) => {
-        const response = await fetch(`/api/products/?username=${username.toLowerCase()}&articleIndex=${articleIndex}`)
+        const response = await fetch(`/api/products/?username=${formatUsername(username)}&articleIndex=${articleIndex}`)
         const data = await response.json()
         console.log(data)
         setProducts(data)
