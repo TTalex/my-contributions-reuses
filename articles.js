@@ -95,5 +95,68 @@ export default [
         url: "https://karger.com/ofa/article/17/2/109/869906/Use-of-the-WHO-Nutrient-Profile-Model-for-Food",
         condition: "created_t < 1680652800 and lang = 'de'",
         notes: "Article mentions 'We downloaded the complete [Open Food Facts] database, filtered for products classified as available on the German market [slightly more than 200,000], and used R, an open-source statistical analysis software, to extract a randomly ordered list of products', extract date is April 4, 2023."
+    },
+    {
+        name: "Healthy Food Traditions? Nutritional Quality and Food Composition of EU Geographical Indications",
+        authors: "Gero Laurenz Höhn, Martijn Huysmans, Christophe Crombez",
+        url: "https://www.econ.kuleuven.be/licos/publications/dp/dp429",
+        condition: "'en:france' in countries_tags and created_t < 1638316800 and nutriscore_score not null and ('en:cured-sausages' in categories_tags or 'en:cured-hams' in categories_tags or 'en:white-hams' in categories_tags or 'en:cow-cheeses' in categories_tags or 'en:goat-cheeses' in categories_tags or 'en:sheep-cheeses' in categories_tags)",
+        notes: "From pdf: 'We downloaded OFF data in November 2021. As about 30% of GIs represent cheeses and processed meats, we focused on the following food categories : cured sausages, cured hams, white hams, cow cheeses, goat cheeses and sheep cheeses.' and in appendix 'We deleted observations with insufficient information in terms of nutritional aspects.'"
+    },
+    {
+        name: "Complementarity between the updated version of the front-of-pack nutrition label Nutri-Score and the food-processing NOVA classification",
+        authors: "Barthélemy Sarda, Emmanuelle Kesse-Guyot, Valérie Deschamps, Pauline Ducrot, Pilar Galan, Serge Hercberg, Melanie Deschasaux-Tanguy, Bernard Srour, Leopold K Fezeu, Mathilde Touvier, Chantal Julia",
+        url: "https://www.cambridge.org/core/journals/public-health-nutrition/article/complementarity-between-the-updated-version-of-the-frontofpack-nutrition-label-nutriscore-and-the-foodprocessing-nova-classification/38D3F972F1F2414E3856E29FE09D35E8",
+        condition: "'en:france' in countries_tags and created_t < 1638316800 and nutriscore_score not null and nova_group not null",
+        notes: "From pdf: 'The analyses were conducted with data extracted in November 2021 and with products sold in France.' and 'Food categories not subject to display the Nutri-Score (e.g. alcoholic beverages, spices, dry tea, coffee or baby food) ... were excluded.' and 'In case of missing values or outlier values for a mandatory nutrient ... or NOVA classification, products were excluded'."
+    },
+    {
+        name: "Consistency of the Initial and Updated Version of the Nutri-Score with Food-Based Dietary Guidelines: A French Perspective",
+        authors: "Barthelemy Sarda, Emmanuelle Kesse-Guyot, Valérie Deschamps, Pauline Ducrot, Pilar Galan, Serge Hercberg, Melanie Deschasaux-Tanguy, Bernard Srour, Leopold K Fezeu, Mathilde Touvier, Chantal Julia",
+        url: "https://www.sciencedirect.com/science/article/pii/S002231662400049X",
+        condition: "'en:france' in countries_tags and created_t < 1638316800 and nutriscore_score not null",
+        notes: "From pdf: 'The OpenFoodFacts data used in the study are available on their website (https://world.openfoodfacts.org/, accessed on November 2021).' and 'Data from OpenFoodFacts were... restricted to products sold on the French market.' and 'In case of missing values for a mandatory nutrient on the label, products were excluded.'"
+    },
+    {
+        name: "Food additive emulsifiers and the risk of type 2 diabetes: analysis of data from the NutriNet-Santé prospective cohort study",
+        authors: "Clara Salame, Guillaume Javaux, Laury Sellem, Emilie Viennois, Fabien Szabo de Edelenyi, Cédric Agaësse, Alexandre De Sa, Inge Huybrechts, Fabrice Pierre, Xavier Coumoul, Chantal Julia, Emmanuelle Kesse-Guyot, Benjamin Allès, Léopold K Fezeu, Serge Hercberg, Mélanie Deschasaux-Tanguy, Emmanuel Cosson, Sopio Tatulashvili, Benoit Chassaing, Bernard Srour, Mathilde Touvier",
+        url: "https://www.thelancet.com/journals/landia/article/PIIS2213-8587(24)00086-X/fulltext",
+        condition: "'en:france' in countries_tags and created_t < 1638316800 and additives_n > 0",
+        notes: "From pdf: 'The NutriNet-Santé study... links to multiple food composition databases (Open Food Facts, ...).' The study focuses on French adults and quantifies exposure to 61 food additives classified as emulsifiers."
+    },
+    {
+        name: "The food traffic light that gives a green light to ultra-processed foods: visual data mining",
+        authors: "Carmen Romero Ferreiro, Pilar Cancelas Navia, David Lora Pablos",
+        url: "http://www.biometricsociety.net/wp-content/uploads/VI_Jornadas_Cientificas_de_Estudiantes_de_la_SEB_Book_of_abstracts.pdf#page=53",
+        condition: "'en:spain' in countries_tags and created_t < 1638316800 and nova_group not null and nutriscore_score not null",
+        notes: "From abstract: 'The Open Food Facts database was used to obtain all products currently marketed in Spain with the Nutri-Score and NOVA classification (n=9931)'."
+    },
+    {
+        name: "PEFAP : Estimating the environmental footprint of food products from packaging data",
+        authors: "Gustave Coste, Arnaud Hélias",
+        url: "https://joss.theoj.org/papers/10.21105/joss.03329",
+        condition: "'en:france' in countries_tags and created_t < 1620777600 and ingredients_n > 0",
+        notes: "From pdf: 'To be functional, this program has been interfaced to the Open Food Facts database (Open Food Facts, n.d.) providing packaging information [Accessed May 12, 2021]'. Git repo also shows that environmental impact is computed using ingredients https://framagit.org/GustaveCoste/off-product-environmental-impact/-/blob/master/impacts_estimation/impacts_estimation.py?ref_type=heads#L928."
+    },
+    {
+        name: "Exposition des enfants et des adolescents à la publicité pour des produits gras, sucrés, salés",
+        authors: "Hélène Escalon, Anne-Juliette Serry, Chloé Resche",
+        url: "https://www.santepubliquefrance.fr/determinants-de-sante/nutrition-et-activite-physique/documents/rapport-synthese/exposition-des-enfants-et-des-adolescents-a-la-publicite-pour-des-produits-gras-sucres-sales",
+        condition: "'en:france' in countries_tags and created_t < 1590969600 and nutriscore_score not null and not ('en:alcoholic-beverages' in categories_tags or 'en:baby-foods' in categories_tags)",
+        notes: "From pdf: 'Pour coder les publicités des produits alimentaires et des boissons de la base Kantar Media... la base de données Open Food Facts a été utilisée.' L'étude porte sur le marché français et a exclu les boissons alcoolisées, l'alimentation infantile et l'alimentation pour animaux. Le rapport ayant été publié en juin 2020, le timestamp est fixé au 1er juin 2020."
+    },
+    {
+        name: "Improving data cleaning by learning from unstructured textual data",
+        authors: "Rihem Nasfi, Guy de Tré, Antoon Bronselaer",
+        url: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10896675",
+        condition: "length(allergens_tags) > 0 and created_t < 1734739200",
+        notes: "From pdf: 'Allergens. This dataset contains information about products and their allergens. The data was collected from [...] Open Food Facts', Article recieved 21 December 2024"
+    },
+    {
+        name: "Characterizing Meat- and Milk/Dairy-like Vegetarian Foods and Their Counterparts Based on Nutrient Profiling and Food Labels",
+        authors: "Rodríguez-Martín, N.M.; Córdoba, P.; Sarriá, B.; Verardo, V.; Pedroche, J.; Alcalá-Santiago, Á.; García-Villanova, B.; Molina-Montes, E.",
+        url: "https://www.mdpi.com/2304-8158/12/6/1151",
+        condition: "created_t < 1669852800 and 'en:spain' in countries_tags and nutriscore_score not null and nova_group not null and ingredients_n > 0",
+        notes: "From article: 'marketed in Spain', 'Nutritional information per 100 g or mL, ingredients, and nutritional declarations, as well as the Nutri-Score, NOVA, and Eco-Score of each food were collected from Open Food Facts' and latest retrival date is 'November 2022'"
     }
 ]

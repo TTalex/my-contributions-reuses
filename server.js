@@ -24,7 +24,7 @@ app.get('/api/stats/:username', async (req, res) => {
 
     const query = `
         WITH user_food AS (
-            SELECT creator, created_t, categories_tags, countries_tags, nova_group, nutriscore_score, ingredients_n, additives_n, lang, code
+            SELECT creator, created_t, categories_tags, countries_tags, nova_group, nutriscore_score, ingredients_n, additives_n, lang, code, allergens_tags
             FROM food_sorted 
             WHERE creator = $username
         )

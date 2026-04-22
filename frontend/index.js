@@ -119,7 +119,7 @@ const App = () => {
                         Scientific articles are handpicked based on their usage of the Open Food Facts database.<br/>
                         For each article, we try to reproduce the extraction method they used, to fetch products that were in the database at the time of the article's creation.<br/>
                         If one of the products was created by the mentioned used, we consider it as a contribution to the article.<br/>
-                        Articles with at least one contribution are displayed above, the full list of articles considered is detailed below.<br/>
+                        Articles with at least one contribution are displayed above, the full list of ({(articles && articles.length) || 0}) articles considered is detailed below.<br/>
                         Note: the older the article is, the less accurate contributions counts are, since products might have been updated between article creation and our data export (April 2026).
                     </p>
                     <table className="table is-fullwidth is-hoverable content is-small">
