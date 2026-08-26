@@ -67,13 +67,13 @@ const App = () => {
                     </div>
                     {stats && <hr/>}
                     {stats && <div className="field is-grouped is-grouped-multiline">
-                        <div class="control">
+                        <div className="control">
                             <div className="tags has-addons">
                                 <span className="tag">Total products added</span>
                                 <span className="tag is-primary">{stats.count_all.toLocaleString()}</span>
                             </div>
                         </div>
-                        <div class="control">
+                        <div className="control">
                             <div className="tags has-addons">
                                 <span className="tag">Number of articles using contributions</span>
                                 <span className="tag is-primary">{stats.articles.length}</span>
@@ -144,6 +144,8 @@ const App = () => {
             <footer className="footer">
                 <div className="content has-text-centered">
                     <strong>My Open Food Facts contributions reuses</strong> by <a href="https://github.com/TTalex">TTalex</a>. See source code on <a href="https://github.com/TTalex/my-contributions-reuses">GitHub</a>.
+                    <br/>
+                    <a href="index_fr.html">🇫🇷 Version française</a>
                 </div>
             </footer>
             <div className={"modal" + (showModal ? " is-active" : "")}>
